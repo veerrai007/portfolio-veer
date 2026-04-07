@@ -1,9 +1,7 @@
 import React from "react";
 import { BoxReveal } from "@/components/magicui/box-reveal";
-import Link from "next/link";
 import Button from "../components/button";
 import { FlipText } from "./magicui/flip-text";
-import { IconCloudDemo } from "./iconCloud";
 
 export default function Hero() {
   return (
@@ -54,7 +52,16 @@ export default function Hero() {
       </div>
 
       <div className="flex flex-row max-w-full md:h-[600px] md:w-[900px] item-start md:items-center md:justify-center">
-        <IconCloudDemo />
+        {/* <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/git/git" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/typescript/typescript" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/html5/html5" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/react/react" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/css3/css3" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/nodedotjs/nodedotjs" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/firebase/firebase" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/docker/docker" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/mongodb/mongodb" alt="" />
+        <img className="h-[50px] w-[50px]" src="https://cdn.simpleicons.org/tailwindcss/tailwindcss" alt="" /> */}
       </div>
 
     </div>
