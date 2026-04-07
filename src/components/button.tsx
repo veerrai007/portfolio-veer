@@ -2,9 +2,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const Button = ({ className }: { className?: string }) => {
   return (
-    <StyledWrapper className="mt-[1.6rem]">
+    <StyledWrapper className={className}>
       <button className="btn-17">
         <span className="text-container">
           <span className="text">PROJECTS</span>
