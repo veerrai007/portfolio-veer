@@ -6,12 +6,39 @@ import { BoxReveal } from "./magicui/box-reveal";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 1000);
+    setLoading(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const errorData = await response.json();
+        setError(errorData.error || "Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      setError("An unexpected error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -47,6 +74,7 @@ export default function Contact() {
                 <div className="flex flex-col gap-2">
                   <input 
                     type="text" 
+                    name="name"
                     placeholder="Your Name" 
                     required
                     className="w-full rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-3 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all dark:text-white"
@@ -55,6 +83,7 @@ export default function Contact() {
                 <div className="flex flex-col gap-2">
                   <input 
                     type="email" 
+                    name="email"
                     placeholder="Your Email" 
                     required
                     className="w-full rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-3 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all dark:text-white"
@@ -62,17 +91,20 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col gap-2">
                   <textarea 
+                    name="message"
                     placeholder="Your Message..." 
                     rows={4}
                     required
                     className="w-full rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-3 text-sm outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all resize-none dark:text-white"
                   />
                 </div>
+                {error && <p className="text-red-500 text-sm">{error}</p>}
                 <button 
                   type="submit"
-                  className="group mt-2 w-full inline-flex h-12 items-center justify-center rounded-xl bg-black dark:bg-white px-6 font-semibold text-white dark:text-black transition-all hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
+                  disabled={loading}
+                  className="group mt-2 w-full inline-flex h-12 items-center justify-center rounded-xl bg-black dark:bg-white px-6 font-semibold text-white dark:text-black transition-all hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  {loading ? "Sending..." : "Send Message"} <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
               </motion.form>
             ) : (
