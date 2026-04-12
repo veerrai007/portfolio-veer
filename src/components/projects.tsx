@@ -5,10 +5,10 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projectsList = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with Next.js, integrating secure payments and an intuitive admin dashboard.",
-    tech: ["Next.js", "TailwindCSS", "PostgreSQL", "Stripe"],
-    liveUrl: "#",
+    title: "AI Study Companion App",
+    description: "An AI-powered study companion that helps users study by uploading documents, getting AI-generated content, and taking automatically generated custom quizzes.",
+    tech: ["Next.js", "TailwindCSS", "NextAuth.js", "AI APIs"],
+    liveUrl: "https://studycompanion-nu.vercel.app",
     githubUrl: "#",
   },
   {
