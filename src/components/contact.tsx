@@ -118,7 +118,7 @@ export default function Contact() {
             <div className="bg-zinc-100 dark:bg-zinc-900 p-3 rounded-full mr-4 group-hover:scale-110 transition-transform">
               <Mail className="w-5 h-5 text-sky-500" />
             </div>
-            veerrai007@gmail.com
+            iveer003@gmail.com
           </a>
         </motion.div>
       </div>

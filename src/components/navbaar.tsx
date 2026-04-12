@@ -13,10 +13,8 @@ export default function Navbar({ className }: { className?: string }) {
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
+            <HoveredLink href="https://studycompanion-nu.vercel.app">AI Study Companion</HoveredLink>
+            <HoveredLink href="https://gymwebsite-0jz3.onrender.com/">Gym Website</HoveredLink>
           </div>
         </MenuItem>
 

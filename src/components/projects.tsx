@@ -5,7 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projectsList = [
   {
-    title: "AI Study Companion App",
+    title: "AI Study Companion",
     description: "An AI-powered study companion that helps users study by uploading documents, getting AI-generated content, and taking automatically generated custom quizzes.",
     tech: ["Next.js", "TailwindCSS", "NextAuth.js", "AI APIs"],
     liveUrl: "https://studycompanion-nu.vercel.app",
@@ -19,10 +19,10 @@ const projectsList = [
     githubUrl: "#",
   },
   {
-    title: "AI Image Generator",
-    description: "Web app that converts text prompts into high-quality images using advanced machine learning APIs.",
-    tech: ["React", "Express", "OpenAI API", "Framer Motion"],
-    liveUrl: "#",
+    title: "Gym Website",
+    description: "Designed and developed a modern, responsive website for a fitness/gym center to showcase services.",
+    tech: ["React.js", "Tailwind CSS", "Bootstrap", "React Router", "React Icons"],
+    liveUrl: "https://gymwebsite-0jz3.onrender.com/",
     githubUrl: "#",
   }
 ];
