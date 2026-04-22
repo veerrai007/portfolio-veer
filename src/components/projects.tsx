@@ -9,21 +9,21 @@ const projectsList = [
     description: "An AI-powered study companion that helps users study by uploading documents, getting AI-generated content, and taking automatically generated custom quizzes.",
     tech: ["Next.js", "TailwindCSS", "NextAuth.js", "AI APIs"],
     liveUrl: "https://studycompanion-nu.vercel.app",
-    githubUrl: "#",
+    githubUrl: "https://github.com/veerrai007/study-companion",
   },
-  {
-    title: "Real-time Chat App",
-    description: "Instant messaging application featuring real-time updates, user authentication, and responsive design.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
+  // {
+  //   title: "Real-time Chat App",
+  //   description: "Instant messaging application featuring real-time updates, user authentication, and responsive design.",
+  //   tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+  //   liveUrl: "#",
+  //   githubUrl: "#",
+  // },
   {
     title: "Gym Website",
     description: "Designed and developed a modern, responsive website for a fitness/gym center to showcase services.",
     tech: ["React.js", "Tailwind CSS", "Bootstrap", "React Router", "React Icons"],
     liveUrl: "https://gymwebsite-0jz3.onrender.com/",
-    githubUrl: "#",
+    githubUrl: "https://github.com/veerrai007/Gym-Site",
   }
 ];
 

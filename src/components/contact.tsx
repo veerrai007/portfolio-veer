@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Send, CheckCircle2 } from "lucide-react";
+import { Mail, Send, CheckCircle2, Github, Twitter, Linkedin, Instagram } from "lucide-react";
 import { BoxReveal } from "./magicui/box-reveal";
 
 export default function Contact() {
@@ -152,6 +152,21 @@ export default function Contact() {
             </div>
             iveer003@gmail.com
           </a>
+          
+          <div className="mt-12 flex items-center justify-center gap-6">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="p-3 bg-zinc-100 dark:bg-zinc-900 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-sky-500 dark:hover:text-sky-400 hover:scale-110 transition-all shadow-sm">
+              <Github className="w-5 h-5" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="p-3 bg-zinc-100 dark:bg-zinc-900 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-sky-500 dark:hover:text-sky-400 hover:scale-110 transition-all shadow-sm">
+              <Twitter className="w-5 h-5" />
+            </a>
+            <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="p-3 bg-zinc-100 dark:bg-zinc-900 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-sky-500 dark:hover:text-sky-400 hover:scale-110 transition-all shadow-sm">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="p-3 bg-zinc-100 dark:bg-zinc-900 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-sky-500 dark:hover:text-sky-400 hover:scale-110 transition-all shadow-sm">
+              <Instagram className="w-5 h-5" />
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

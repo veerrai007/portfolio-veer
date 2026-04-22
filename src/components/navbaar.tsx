@@ -18,7 +18,7 @@ export default function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
 
-        <MenuItem setActive={setActive} active={active} item="Contact">
+        <MenuItem setActive={setActive} active={active} item="Socials">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="https://github.com/veerrai007" target="_blank">Github</HoveredLink>
             <HoveredLink href="https://www.instagram.com/veerrai007/" target="_blank">Instagram</HoveredLink>
