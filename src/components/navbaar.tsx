@@ -14,6 +14,7 @@ export default function Navbar({ className }: { className?: string }) {
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="https://studycompanion-nu.vercel.app">AI Study Companion</HoveredLink>
+            <HoveredLink href="https://content-broadcast-teal.vercel.app/">EduBroadcast</HoveredLink>
             <HoveredLink href="https://gymwebsite-0jz3.onrender.com/">Gym Website</HoveredLink>
           </div>
         </MenuItem>

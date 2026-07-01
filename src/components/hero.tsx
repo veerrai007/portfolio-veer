@@ -50,7 +50,11 @@ export default function Hero() {
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </a>
           <a 
+<<<<<<< HEAD
             href="/resume.pdf" 
+=======
+            href="/Resume.pdf" 
+>>>>>>> b087f2a80a0850c63c071183567d5d1ba123132b
             download="Veer_Resume.pdf" 
             className="group w-full sm:w-auto inline-flex h-14 items-center justify-center rounded-full border-2 border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-950/50 backdrop-blur-md px-8 font-semibold text-black dark:text-white transition-all hover:border-black dark:hover:border-white hover:bg-zinc-50 dark:hover:bg-zinc-900 active:scale-95"
           >
