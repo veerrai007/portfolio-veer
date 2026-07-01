@@ -7,17 +7,17 @@ const projectsList = [
   {
     title: "AI Study Companion",
     description: "An AI-powered study companion that helps users study by uploading documents, getting AI-generated content, and taking automatically generated custom quizzes.",
-    tech: ["Next.js", "TailwindCSS", "NextAuth.js", "AI APIs"],
+    tech: ["Next.js", "TailwindCSS", "NextAuth.js", "AI APIs", "MongoDB", "Framer-Motion"],
     liveUrl: "https://studycompanion-nu.vercel.app",
-    githubUrl: "https://github.com/veerrai007/study-companion",
+    githubUrl: "https://github.com/veerrai007/study_companion",
   },
-  // {
-  //   title: "Real-time Chat App",
-  //   description: "Instant messaging application featuring real-time updates, user authentication, and responsive design.",
-  //   tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-  //   liveUrl: "#",
-  //   githubUrl: "#",
-  // },
+  {
+    title: "EduBroadcast",
+    description: "A full-stack content broadcasting system for educational environments where teachers upload content, principals approve or reject it, and students view live broadcast content from a public page.",
+    tech: ["Next.js", "TypeScript", "MongoDB", "Cloudinary", "TailwindCSS", "shadcn/ui"],
+    liveUrl: "https://content-broadcast-teal.vercel.app/",
+    githubUrl: "https://github.com/veerrai007/content-broadcast",
+  },
   {
     title: "Gym Website",
     description: "Designed and developed a modern, responsive website for a fitness/gym center to showcase services.",
@@ -31,7 +31,7 @@ export default function Projects() {
   return (
     <section id="projects" className="min-h-svh w-full py-24 flex flex-col items-center justify-center bg-zinc-50 dark:bg-zinc-950/50">
       <div className="max-w-6xl mx-auto px-4 md:px-8 w-full">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
